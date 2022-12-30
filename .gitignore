@@ -1,0 +1,12 @@
+/build
+/gradle
+/.gradle
+/.idea
+/captures
+/gradle*
+
+**/build
+
+**/*.iml
+
+keystore.properties

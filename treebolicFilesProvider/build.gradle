@@ -1,0 +1,31 @@
+plugins {
+    id 'com.android.library'
+}
+
+android {
+
+    namespace 'treebolic.provider.files'
+
+    compileSdkVersion rootProject.ext.compileSdkVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        multiDexEnabled true
+    }
+
+     compileOptions {
+        coreLibraryDesugaringEnabled true
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation project(':treebolicGlue')
+
+    implementation 'io.github.treebolic:treebolic-model:4.0-SNAPSHOT'
+    implementation 'io.github.treebolic:treebolic-mutable:4.0-SNAPSHOT'
+    implementation 'io.github.treebolic:provider-files:4.0-SNAPSHOT'
+    implementation 'androidx.annotation:annotation:1.5.0'
+}
