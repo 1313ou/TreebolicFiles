@@ -13,7 +13,7 @@ public class Provider2 extends treebolic.provider.files.Provider
 {
 	// D E C O R A T I O N   M E M B E R S
 
-	static Image[] images2 = makeImages(images);
+	static final Image[] images2 = makeImages(images);
 
 	// P A R S E
 
