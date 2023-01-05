@@ -25,6 +25,7 @@ public class Provider2 extends treebolic.provider.files.Provider
 	 * @param parameters parameters
 	 * @return model if successful
 	 */
+	@NonNull
 	@Override
 	public Model makeModel(final String source, final URL base, final Properties parameters)
 	{
@@ -35,7 +36,7 @@ public class Provider2 extends treebolic.provider.files.Provider
 	// D E C O R A T E
 
 	@Override
-	public void setNodeImage(final MutableNode node, final int index)
+	public void setNodeImage(@NonNull final MutableNode node, final int index)
 	{
 		if (index != -1)
 		{
@@ -44,7 +45,7 @@ public class Provider2 extends treebolic.provider.files.Provider
 	}
 
 	@Override
-	public void setTreeEdgeImage(final MutableNode node, final int index)
+	public void setTreeEdgeImage(@NonNull final MutableNode node, final int index)
 	{
 		if (index != -1)
 		{
@@ -53,7 +54,7 @@ public class Provider2 extends treebolic.provider.files.Provider
 	}
 
 	@Override
-	public void setEdgeImage(final MutableEdge edge, final int index)
+	public void setEdgeImage(@NonNull final MutableEdge edge, final int index)
 	{
 		if (index != -1)
 		{
@@ -67,6 +68,7 @@ public class Provider2 extends treebolic.provider.files.Provider
 	 * @param imageUrls image urls
 	 * @return images
 	 */
+	@NonNull
 	public static Image[] makeImages(@NonNull final String[] imageUrls)
 	{
 		Image[] images = new Image[imageUrls.length];
