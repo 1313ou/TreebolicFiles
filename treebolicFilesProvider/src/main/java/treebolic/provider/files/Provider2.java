@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) 2023. Bernard Bou
+ */
+
 package treebolic.provider.files;
 
 import java.net.URL;
