@@ -8,6 +8,7 @@ import java.net.URL;
 import java.util.Properties;
 
 import androidx.annotation.NonNull;
+import treebolic.annotations.Nullable;
 import treebolic.glue.iface.Image;
 import treebolic.model.Model;
 import treebolic.model.MutableEdge;
@@ -29,12 +30,12 @@ public class Provider2 extends treebolic.provider.files.Provider
 	 * @param parameters parameters
 	 * @return model if successful
 	 */
-	@NonNull
+	@Nullable
 	@Override
 	public Model makeModel(final String source, final URL base, final Properties parameters)
 	{
 		Model model = super.makeModel(source, base, parameters);
-		return new Model(model.tree, model.settings, images2);
+		return model == null ? null : new Model(model.tree, model.settings, images2);
 	}
 
 	// D E C O R A T E
