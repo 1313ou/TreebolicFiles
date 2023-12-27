@@ -30,6 +30,7 @@ public class Provider2 extends treebolic.provider.files.Provider
 	 * @param parameters parameters
 	 * @return model if successful
 	 */
+	@androidx.annotation.Nullable
 	@Nullable
 	@Override
 	public Model makeModel(final String source, final URL base, final Properties parameters)
