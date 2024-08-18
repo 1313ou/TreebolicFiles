@@ -57,7 +57,7 @@ class Provider2 : Provider() {
          * @param imageUrls image urls
          * @return images
          */
-        private fun makeImages(imageUrls: Array<String>): Array<Image?> {
+        private fun makeImages(@Suppress("SameParameterValue") imageUrls: Array<String>): Array<Image?> {
             val images = arrayOfNulls<Image>(imageUrls.size)
             for (i in imageUrls.indices) {
                 images[i] = treebolic.glue.Image(Provider2::class.java.getResource("images/" + imageUrls[i]))
