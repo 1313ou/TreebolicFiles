@@ -22,7 +22,7 @@ class Provider2 : Provider() {
      * @param parameters parameters
      * @return model if successful
      */
-    override fun makeModel(source: String, base: URL, parameters: Properties): Model? {
+    override fun makeModel(source: String, base: URL?, parameters: Properties?): Model? {
         val model = super.makeModel(source, base, parameters)
         return if (model == null) null else Model(model.tree, model.settings, images2)
     }
